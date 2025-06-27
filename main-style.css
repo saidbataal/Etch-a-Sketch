@@ -1,11 +1,11 @@
 
 .container{
-width: 500px;
-height: 500px;
+width: 550px;
+height: 550px;
 border-style: solid;
-
-
-
+margin: 30px auto;
 }
 
 
+button{display: block;
+       margin: auto;}
