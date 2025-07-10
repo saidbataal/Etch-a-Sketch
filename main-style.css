@@ -4,6 +4,11 @@ width: 550px;
 height: 550px;
 border-style: solid;
 margin: 30px auto;
+display: flex;
+
+flex-wrap: wrap ;
+
+
 }
 
 
