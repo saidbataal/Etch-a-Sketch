@@ -2,17 +2,22 @@ const box = document.querySelector(".container");
 
 const numberOfDivs = 16;
 
-for(let i = 0; i < numberOfDivs; i++){
+const howMuch = numberOfDivs * numberOfDivs;
+
+for(let i = 0; i < howMuch; i++){
+
+let size = 550 / numberOfDivs;
+
 
 const newDiv  = document.createElement("div");
 
 
+newDiv.style.height = size + "px";
+newDiv.style.width = size + "px";
+newDiv.style.boxSizing ="border-box";
+newDiv.style.border = "1px solid black";
+
+
 
 box.appendChild(newDiv);
-
-
-
-
-
-
 };
