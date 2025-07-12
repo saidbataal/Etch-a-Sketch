@@ -35,3 +35,6 @@ coloring.forEach(button => {
 });
 
 
+const button = document.querySelector(".button");
+
+button.addEventListener("click" , () => {let numbers = prompt("enter a number between 1 and 100")});
