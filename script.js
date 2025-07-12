@@ -1,6 +1,8 @@
 const box = document.querySelector(".container");
 
-const numberOfDivs = 16;
+
+function numberOfDivs(number){
+const numberOfDivs = number;
 
 const howMuch = numberOfDivs * numberOfDivs;
 
@@ -23,7 +25,6 @@ box.appendChild(newDiv);
 };
 
 
-
 const coloring = document.querySelectorAll(".myNewDiv");
 
 
@@ -33,8 +34,9 @@ coloring.forEach(button => {
         button.style.backgroundColor = "red";
    });
 });
-
+}
+numberOfDivs(16);
 
 const button = document.querySelector(".button");
 
-button.addEventListener("click" , () => {let numbers = prompt("enter a number between 1 and 100")});
+button.addEventListener("click" , () => {let numbers = prompt("enter a number between 1 and 100");box.innerHTML = "";numberOfDivs(numbers);});
