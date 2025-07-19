@@ -39,4 +39,7 @@ numberOfDivs(16);
 
 const button = document.querySelector(".button");
 
-button.addEventListener("click" , () => {let numbers = prompt("enter a number between 1 and 100");box.innerHTML = "";numberOfDivs(numbers);});
+button.addEventListener("click" , () => {let numbers = prompt("enter a number between 1 and 100");
+                                         Number(numbers);if(isNaN(numbers) ||numbers < 1 || numbers > 100 || numbers === null || numbers === ""){alert("enter a valid number")}
+                             else {box.innerHTML = "";numberOfDivs(numbers);}
+                        });
