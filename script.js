@@ -31,12 +31,7 @@ numberOfDivs();
 
 
 
-const coloring = document.querySelectorAll(".myNewDiv");
-    coloring.forEach(button => {
-    button.addEventListener("mouseenter" , () => {
-        button.style.backgroundColor = "red";
-   });
-});
+
 
 
 
