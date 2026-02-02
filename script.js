@@ -1,45 +1,64 @@
 const box = document.querySelector(".container");
 
 
-function numberOfDivs(number){
-const numberOfDivs = number;
+function numberOfDivs(number = 16) {
+    
 
-const howMuch = numberOfDivs * numberOfDivs;
+    const howMuch = number * number;
 
-for(let i = 0; i < howMuch; i++){
+    for (let i = 0; i < howMuch; i++) {
 
-let size = 550 / numberOfDivs;
-
-
-const newDiv  = document.createElement("div");
+        let size = 550 / number;
 
 
-newDiv.style.height = size + "px";
-newDiv.style.width = size + "px";
-newDiv.style.boxSizing ="border-box";
-newDiv.style.border = "1px solid black";
-newDiv.classList.add("myNewDiv");
+        const newDiv = document.createElement("div");
 
 
-box.appendChild(newDiv);
-};
+        newDiv.style.height = size + "px";
+        newDiv.style.width = size + "px";
+        newDiv.style.boxSizing = "border-box";
+        newDiv.style.border = "1px solid black";
+        newDiv.classList.add("myNewDiv");
+
+
+        box.appendChild(newDiv);
+    };
+
+
+    
+}
+numberOfDivs();
+
 
 
 const coloring = document.querySelectorAll(".myNewDiv");
-
-
-
-coloring.forEach(button => {
+    coloring.forEach(button => {
     button.addEventListener("mouseenter" , () => {
         button.style.backgroundColor = "red";
    });
 });
-}
-numberOfDivs(16);
+
+
 
 const button = document.querySelector(".button");
 
-button.addEventListener("click" , () => {let numbers = prompt("enter a number between 1 and 100");
-                                         Number(numbers);if(isNaN(numbers) ||numbers < 1 || numbers > 100 || numbers === null || numbers === ""){alert("enter a valid number")}
-                             else {box.innerHTML = "";numberOfDivs(numbers);}
-                        });
+button.addEventListener("click", () => {
+    let numbers = Number(prompt("enter a number between 1 and 100"))
+   ; if (isNaN(numbers) || numbers < 1 || numbers > 100 || numbers === null || numbers === "") { alert("enter a valid number") }
+    else { box.innerHTML = ""; numberOfDivs(numbers); }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
