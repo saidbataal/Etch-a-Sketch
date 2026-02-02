@@ -31,6 +31,12 @@ numberOfDivs();
 
 
 
+box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){
+e.target.style.backgroundColor = "red";
+
+}})
+
+
 
 
 
