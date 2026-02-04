@@ -18,6 +18,7 @@ function numberOfDivs(number = 16) {
         newDiv.style.width = size + "px";
         newDiv.style.boxSizing = "border-box";
         newDiv.style.border = "1px solid black";
+        newDiv.style.backgroundColor = "white";
         newDiv.classList.add("myNewDiv");
 
 
@@ -31,10 +32,10 @@ numberOfDivs();
 
 
 
-/*box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if()
+box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if()
 
 
-}})*/
+}})
 
 
 
