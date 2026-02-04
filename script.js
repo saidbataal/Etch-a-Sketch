@@ -19,6 +19,7 @@ function numberOfDivs(number = 16) {
         newDiv.style.boxSizing = "border-box";
         newDiv.style.border = "1px solid black";
         newDiv.style.backgroundColor = "";
+        newDiv.style.opacity = "0.1";
         newDiv.classList.add("myNewDiv");
         box.appendChild(newDiv);
     };
