@@ -19,7 +19,6 @@ function numberOfDivs(number = 16) {
         newDiv.style.boxSizing = "border-box";
         newDiv.style.border = "1px solid black";
         newDiv.style.backgroundColor = "";
-        newDiv.style.opacity = "0.1";
         newDiv.classList.add("myNewDiv");
         box.appendChild(newDiv);
     };
@@ -34,7 +33,7 @@ function randomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    return `rgb(${r},${g},${b})`;
+    return `rgb(${r},${g},${b},0.1)`;
 
 
 
@@ -49,7 +48,7 @@ function randomColor() {
 
 box.addEventListener("mouseover", (e) => {
     if (e.target.classList.contains("myNewDiv")) {
-        if (e.target.style.backgroundColor === "") { e.target.style.backgroundColor = randomColor(); }
+        if (e.target.style.backgroundColor === "") { e.target.style.backgroundColor = randomColor();}
     }
 
 })
