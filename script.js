@@ -18,10 +18,8 @@ function numberOfDivs(number = 16) {
         newDiv.style.width = size + "px";
         newDiv.style.boxSizing = "border-box";
         newDiv.style.border = "1px solid black";
-        newDiv.style.backgroundColor = "white";
+        newDiv.style.backgroundColor = "";
         newDiv.classList.add("myNewDiv");
-
-
         box.appendChild(newDiv);
     };
 
@@ -29,13 +27,30 @@ function numberOfDivs(number = 16) {
     
 }
 numberOfDivs();
+ 
+
+function randomColor(){
+const r = Math.floor(Math.random() * 256);
+const g = Math.floor(Math.random() * 256);
+const b = Math.floor(Math.random() * 256);
+return `rgb(${r},${g},${b})` ;
 
 
 
-box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if()
+
+}
 
 
-}})
+
+
+
+
+
+box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if(e.target.style.backgroundColor === "")
+{e.target.style.backgroundColor = "red";}
+}
+
+})
 
 
 
