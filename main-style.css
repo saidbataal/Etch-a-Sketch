@@ -1,21 +1,22 @@
+.container {
+       width: 550px;
+       height: 550px;
+       border-style: solid;
+       margin: 30px auto;
+       display: flex;
 
-.container{
-width: 550px;
-height: 550px;
-border-style: solid;
-margin: 30px auto;
-display: flex;
-
-flex-wrap: wrap ;
+       flex-wrap: wrap;
 
 
 }
 
 
-button{display: block;
-       margin: auto;}
+button {
+       display: block;
+       margin: auto;
+}
 
 
-.colorful{margin-top: 10px; }
-
-
+.colorful {
+       margin-top: 10px;
+}

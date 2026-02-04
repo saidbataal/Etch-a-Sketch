@@ -2,7 +2,7 @@ const box = document.querySelector(".container");
 
 
 function numberOfDivs(number = 16) {
-    
+
 
     const howMuch = number * number;
 
@@ -24,16 +24,16 @@ function numberOfDivs(number = 16) {
     };
 
 
-    
+
 }
 numberOfDivs();
- 
 
-function randomColor(){
-const r = Math.floor(Math.random() * 256);
-const g = Math.floor(Math.random() * 256);
-const b = Math.floor(Math.random() * 256);
-return `rgb(${r},${g},${b})` ;
+
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
 
 
 
@@ -46,9 +46,10 @@ return `rgb(${r},${g},${b})` ;
 
 
 
-box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if(e.target.style.backgroundColor === "")
-{e.target.style.backgroundColor = randomColor();}
-}
+box.addEventListener("mouseover", (e) => {
+    if (e.target.classList.contains("myNewDiv")) {
+        if (e.target.style.backgroundColor === "") { e.target.style.backgroundColor = randomColor(); }
+    }
 
 })
 
@@ -61,9 +62,9 @@ const button = document.querySelector(".button");
 
 button.addEventListener("click", () => {
     let numbers = prompt("enter a number between 1 and 100");
-    if(numbers === null  ) return;
-    let  value = Number(numbers);
-     if ( isNaN(numbers) || value < 1 || value > 100  || value === "") { alert("enter a valid number") }
+    if (numbers === null) return;
+    let value = Number(numbers);
+    if (isNaN(numbers) || value < 1 || value > 100 || value === "") { alert("enter a valid number") }
     else { box.innerHTML = ""; numberOfDivs(value); }
 });
 
