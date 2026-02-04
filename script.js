@@ -31,10 +31,10 @@ numberOfDivs();
 
 
 
-box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){
-e.target.style.backgroundColor = "red";
+/*box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if()
 
-}})
+
+}})*/
 
 
 
@@ -44,9 +44,11 @@ e.target.style.backgroundColor = "red";
 const button = document.querySelector(".button");
 
 button.addEventListener("click", () => {
-    let numbers = Number(prompt("enter a number between 1 and 100"))
-   ; if (isNaN(numbers) || numbers < 1 || numbers > 100 || numbers === null || numbers === "") { alert("enter a valid number") }
-    else { box.innerHTML = ""; numberOfDivs(numbers); }
+    let numbers = prompt("enter a number between 1 and 100");
+    if(numbers === null  ) return;
+    let  value = Number(numbers);
+     if ( isNaN(numbers) || value < 1 || value > 100  || value === "") { alert("enter a valid number") }
+    else { box.innerHTML = ""; numberOfDivs(value); }
 });
 
 
