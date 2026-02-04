@@ -47,7 +47,7 @@ return `rgb(${r},${g},${b})` ;
 
 
 box.addEventListener("mouseover", (e) => {if(e.target.classList.contains("myNewDiv")){if(e.target.style.backgroundColor === "")
-{e.target.style.backgroundColor = "red";}
+{e.target.style.backgroundColor = randomColor();}
 }
 
 })
